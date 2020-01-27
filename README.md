@@ -1,1 +1,0 @@
-# ratnakarr-map
