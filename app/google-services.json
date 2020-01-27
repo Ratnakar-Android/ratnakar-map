@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "572503785980",
+    "firebase_url": "https://redbusmapdemo-a3132.firebaseio.com",
+    "project_id": "redbusmapdemo-a3132",
+    "storage_bucket": "redbusmapdemo-a3132.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572503785980:android:5312cb7f8791786b627279",
+        "android_client_info": {
+          "package_name": "com.redbus.map.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572503785980-g1gp48eao57o3j76c8mr9mud3jjuld00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_fKpmO7LUOZ8WtWyrFr8DySnFXRDoDg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572503785980-g1gp48eao57o3j76c8mr9mud3jjuld00.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
