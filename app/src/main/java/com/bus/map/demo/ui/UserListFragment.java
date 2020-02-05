@@ -531,8 +531,8 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
                     for (PolylineData mPolylineData : mPolylinesData) {
                         mPolylineData.getPolyline().remove();
                     }
-                    mPolylinesData.clear();
-                    mPolylinesData = new ArrayList<>();
+                        mPolylinesData.clear();
+                        mPolylinesData = new ArrayList<>();
                 }
 
                 //Todo Ratnakar has to modify this code
@@ -560,8 +560,8 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
                     polyline.setColor(ContextCompat.getColor(getActivity(), R.color.darkGrey));
                     polyline.setClickable(true);
                      mPolylinesData.add(new PolylineData(polyline, route.legs[0]));
-//
-//                }
+
+                }
 
 
 
