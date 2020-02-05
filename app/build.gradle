@@ -1,58 +1,80 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.redbus.map.demo"
+        applicationId "com.bus.map.demo"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            multiDexKeepFile file('multidex-config.txt')
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    //Android Support Design Library
-    implementation 'com.android.support:design:27.1.1'
-    //RecyclerView
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
-    // Support multidex
-    implementation 'com.android.support:multidex:1.0.3'
+
+
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.2"
+    implementation 'androidx.work:work-runtime:2.2.0'
     // Firebase Core
     implementation 'com.google.firebase:firebase-core:16.0.1'
     //Firebase Authentication
     implementation 'com.google.firebase:firebase-auth:16.0.2'
     // Firestore Firestore
     implementation 'com.google.firebase:firebase-firestore:17.0.4'
-
     //Google Play Services for Maps
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
-
     // Google play services for location information
     implementation 'com.google.android.gms:play-services-location:15.0.1'
-
-    // glide
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
-
-    // Circle ImageView
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
 //    // add the Firebase SDK for Google Analytics
 //    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    // Map all services are provided by this
+    implementation 'com.google.maps:google-maps-services:0.11.0'
+    implementation 'org.slf4j:slf4j-simple:1.7.25'
+// glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
+    // Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation 'com.google.dagger:dagger:2.13'
+    kapt 'com.google.dagger:dagger-compiler:2.13'
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    implementation 'androidx.work:work-runtime:2.2.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.room:room-runtime:2.0.0'
+    annotationProcessor 'androidx.room:room-compiler:2.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    kapt 'androidx.room:room-compiler:2.0.0'
+    implementation 'com.google.guava:guava:27.0.1-android'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+
 }

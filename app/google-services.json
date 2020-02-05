@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "572503785980",
-    "firebase_url": "https://redbusmapdemo-a3132.firebaseio.com",
-    "project_id": "redbusmapdemo-a3132",
-    "storage_bucket": "redbusmapdemo-a3132.appspot.com"
+    "project_number": "16049366208",
+    "firebase_url": "https://redbusmapdemo-1234.firebaseio.com",
+    "project_id": "redbusmapdemo-1234",
+    "storage_bucket": "redbusmapdemo-1234.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:572503785980:android:5312cb7f8791786b627279",
+        "mobilesdk_app_id": "1:16049366208:android:0009d1d5c99b6e8703b925",
         "android_client_info": {
-          "package_name": "com.redbus.map.demo"
+          "package_name": "com.bus.map.demo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "572503785980-g1gp48eao57o3j76c8mr9mud3jjuld00.apps.googleusercontent.com",
+          "client_id": "16049366208-vvcao4ohhcgm86njdm8ev2rka8mj4kvh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD_fKpmO7LUOZ8WtWyrFr8DySnFXRDoDg4"
+          "current_key": "AIzaSyDS5MdSe0oeaRYkOQbHX2K2LZtDmSY1QB0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "572503785980-g1gp48eao57o3j76c8mr9mud3jjuld00.apps.googleusercontent.com",
+              "client_id": "16049366208-vvcao4ohhcgm86njdm8ev2rka8mj4kvh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
