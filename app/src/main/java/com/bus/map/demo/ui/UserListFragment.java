@@ -448,7 +448,7 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
 //                Log.d(TAG, "calculateDirections: duration: " + result.routes[0].legs[0].duration);
 //                Log.d(TAG, "calculateDirections: distance: " + result.routes[0].legs[0].distance);
 //                Log.d(TAG, "calculateDirections: geocodedWayPoints: " + result.geocodedWaypoints[0].toString());
-//                addPolylinesToMap(result);
+//               // addPolylinesToMap(result);
 //            }
 //
 //            @Override
@@ -531,12 +531,17 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
                     for (PolylineData mPolylineData : mPolylinesData) {
                         mPolylineData.getPolyline().remove();
                     }
+                    mPolylinesData.clear();
+                    mPolylinesData = new ArrayList<>();
                 }
 
                 //Todo Ratnakar has to modify this code
 
                 for (DirectionsRoute route : result.getRoutes()) {
+
                     Log.d(TAG, "run: leg: " + route.legs[0].toString());
+
+
                     List<com.google.maps.model.LatLng> decodedPath = PolylineEncoding.decode(route.overviewPolyline.getEncodedPath());
 
                     List<LatLng> newDecodedPath = new ArrayList<>();
@@ -554,9 +559,9 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
                     Polyline polyline = mGoogleMap.addPolyline(new PolylineOptions().addAll(newDecodedPath));
                     polyline.setColor(ContextCompat.getColor(getActivity(), R.color.darkGrey));
                     polyline.setClickable(true);
-                    // mPolylinesData.add(new PolylineData(polyline, route.legs[0]));
-
-                }
+                     mPolylinesData.add(new PolylineData(polyline, route.legs[0]));
+//
+//                }
 
 
 
